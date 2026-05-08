@@ -12,6 +12,13 @@
     back:
     - ClothingMaskBreathMedical
 
+- type: loadout
+  id: WFClothingMaskClear
+  price: 0
+  storage:
+    back:
+    - WFClothingMaskClear
+
 #T1
 - type: loadout
   id: WFClothingMaskSterile

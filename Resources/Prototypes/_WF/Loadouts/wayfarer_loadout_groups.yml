@@ -7,6 +7,7 @@
   # Basic and Department Jumpsuits
   - WFClothingUniformJumpsuitColorGrey
   - WFClothingUniformJumpskirtColorGrey
+  - WFClothingUniformJumpsuitClear
   - WFClothingUniformJumpsuitColorWhite
   - WFClothingUniformJumpskirtColorWhite
   - WFClothingUniformJumpsuitColorBlack
@@ -270,6 +271,7 @@
   - WFClothingKimonoPink
   - WFClothingUniformJumpsuitGladiator
   - WFClothingUniformJumpskirtPerformer
+  - WFClothingUniformSkirtDruid
   - UniformMaid
   - ClothingUniformJumpskirtJanimaid
   - ClothingUniformJumpskirtJanimaidmini
@@ -314,6 +316,7 @@
   - WFClothingBackpackDuffel
   - WFClothingBackpackSatchel
   - WFClothingBackpackMessenger
+  - WFClothingBackpackSatchelClear
   - WFClothingBackpackCaptain
   - WFClothingBackpackDuffelCaptain
   - WFClothingBackpackSatchelCaptain
@@ -545,6 +548,7 @@
   - WFClothingBeltPilotFilled
   - WFClothingBeltBandolier
   - WFClothingBeltHolster
+  - ClothingBeltSyndieHolster
   - WFClothingBeltChaplainSash
   - WFClothingBeltChaplainSashFilled
   - WFClothingBeltChaplainDragon
@@ -567,6 +571,7 @@
   loadouts:
   - WFClothingShoesColorBlack
   - WFClothingShoesClothwrap
+  - WFClothingShoesBootsClear
   - WFClothingShoesTourist
   - WFClothingShoesBootsWork
   - WFClothingShoesBootsSalvage
@@ -724,6 +729,7 @@
   - ClothingHeadHatFlowerWreath
   - FoodAmbrosiaVulgaris
   #
+  - WFClothingHeadHatDruid
   - ClothingHeadHatHoshat
   - ClothingHeadHatSyndieMAA
   - ClothingHeadHatWarden
@@ -765,6 +771,7 @@
   - WFClothingHeadHatCowboyWhite
   - WFClothingHeadHatWideBrimmed
   - WFClothingHeadHatWitchhunter
+  - WFClothingHeadHatWitch1
   - WFClothingHeadHatBishopMitre
   - WFClothingHeadHatKippah
   - WFClothingHeadHatPlaguedoctor
@@ -784,6 +791,7 @@
   - WFClothingHeadsetBrigmedicCommon
   - WFClothingHeadsetAltSecurityCommon
   - WFClothingHeadsetGreyCommon
+  - WFClothingHeadsetClear
   - WFClothingHeadsetCargoCommon
   - WFClothingHeadsetMiningCommon
   - WFClothingHeadsetCommandCommon
@@ -938,6 +946,8 @@
   - WFClothingNeckIFFOrange
   - WFClothingNeckIFFPurple
   - WFClothingNeckMantleCap
+  - WFClothingNeckDruidCape
+  - WFClothingNeckDruidMantle
   - WFClothingNeckCloakCap
   - WFClothingNeckCloakCapFormal
   - WFClothingNeckCloakQm
@@ -1110,6 +1120,7 @@
   - WFHoloGraffitiProjector # Punkish (might be annoying)
   - WFCrayonMagic
   - WFSprayPainterMagic
+  - ContractorAccessConfigurator # Coyote: Add Civilian Access Configurator
   # Bureaucracy
   - WFBoxFolderMedicalDoctor
   - WFBrbSign
@@ -1174,6 +1185,7 @@
   loadouts:
   - WFClothingMaskBreath
   - WFClothingMaskBreathMedical
+  - WFClothingMaskClear
   - WFClothingMaskSterile
   - WFClothingMaskGas
   - WFClothingMaskGasMercenary

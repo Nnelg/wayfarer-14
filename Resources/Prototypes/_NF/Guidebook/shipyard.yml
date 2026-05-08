@@ -69,6 +69,7 @@
 #  - ShipyardSpirit
 #  - ShipyardStasis
 #  - ShipyardStringer
+#  - ShipyardStronghold
 #  - ShipyardSurveyor
 #  - ShipyardTide
 #  - ShipyardVagabond
@@ -233,12 +234,12 @@
   id: ShipyardHammer
   name: guide-entry-shipyard-hammer
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Hammer.xml"
-
-- type: guideEntry
-  id: ShipyardHauler
-  name: guide-entry-shipyard-hauler
-  text: "/ServerInfo/_NF/Guidebook/Shipyard/Hauler.xml"
-
+# Wayfarer edit: comment out using new hauler ship
+#- type: guideEntry # Wayfarer edit: comment out using new hauler ship
+#  id: ShipyardHauler # Wayfarer edit: comment out using new hauler ship
+#  name: guide-entry-shipyard-hauler # Wayfarer edit: comment out using new hauler ship
+#  text: "/ServerInfo/_NF/Guidebook/Shipyard/Hauler.xml" # Wayfarer edit: comment out using new hauler ship
+# end of Wayfarer edit: comment out
 - type: guideEntry
   id: ShipyardHonker
   name: guide-entry-shipyard-honker
@@ -353,6 +354,11 @@
   id: ShipyardStringer
   name: guide-entry-shipyard-stringer
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Stringer.xml"
+
+- type: guideEntry
+  id: ShipyardStronghold
+  name: guide-entry-shipyard-stronghold
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Stronghold.xml"
 
 - type: guideEntry
   id: ShipyardSurveyor

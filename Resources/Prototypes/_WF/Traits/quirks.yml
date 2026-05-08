@@ -10,3 +10,21 @@
     - type: AutoEmote
       emotes:
       - ClownGiggle
+
+- type: trait
+  id: Carnivore
+  name: trait-carnivore-name
+  description: trait-carnivore-desc
+  category: Digestions
+  cost: 1
+  components:
+    - type: Carnivore
+
+- type: trait
+  id: Herbivore
+  name: trait-herbivore-name
+  description: trait-herbivore-desc
+  category: Digestions
+  cost: 1
+  components:
+    - type: Herbivore

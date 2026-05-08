@@ -133,6 +133,13 @@
   groupBy: "basicJumpsuit"
 
 - type: loadout
+  id: WFClothingUniformJumpsuitClear
+  price: 0
+  equipment:
+    jumpsuit: WFClothingUniformJumpsuitClear
+  groupBy: "basicJumpsuit"
+
+- type: loadout
   id: WFClothingUniformJumpsuitColorWhite
   price: 200
   equipment:
@@ -1603,6 +1610,15 @@
   price: 1000
   equipment:
     jumpsuit: ClothingUniformJumpskirtPerformer
+
+- type: loadout
+  id: WFClothingUniformSkirtDruid
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: WFT2
+  price: 1000
+  equipment:
+    jumpsuit: ClothingUniformSkirtDruid
 
 - type: loadout
   id: WFClothingUniformJumpsuitSafari

@@ -694,6 +694,7 @@
   # Frontier: emag lathe recipes, item mapper
   - type: EmagLatheRecipes
     emagStaticPacks:
+    - BioGenEmagStatic
     - HostileCubesStatic
     - NFBioGenIngredientsDangerous
   - type: ItemMapper
@@ -705,6 +706,13 @@
     spriteLayers:
     - beaker
   # End Frontier: emag lathe recipes, item mapper
+  # Coyote Start: Biogenerator Buffer System
+  - type: BiogeneratorBuffer
+    current: 0
+    max: 100
+    regenAmount: 5
+    regenInterval: 15 # Wayfarer: 10<15
+  # End Coyote
 
 - type: entity
   parent: BaseLathe

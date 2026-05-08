@@ -446,7 +446,7 @@ namespace Content.Client.Lobby.UI
 
             Markings.OnMarkingAdded += OnMarkingChange;
             Markings.OnMarkingRemoved += OnMarkingChange;
-            Markings.OnMarkingColorChange += OnMarkingChange;
+            Markings.OnMarkingDataChanged += OnMarkingChange; // Coyote: Markings.OnMarkingColorChange to Markings.OnMarkingDataChanged
             Markings.OnMarkingRankChange += OnMarkingChange;
 
             #endregion Markings
@@ -1071,6 +1071,15 @@ namespace Content.Client.Lobby.UI
                 Profile = Profile.WithLoadout(roleLoadout);
                 SetDirty();
             };
+
+            // Wayfarer
+            _loadoutWindow.OnCrimeReasonChanged += reason =>
+            {
+                roleLoadout.CrimeReason = reason;
+                Profile = Profile.WithLoadout(roleLoadout);
+                SetDirty();
+            };
+            // End Wayfarer
 
             _loadoutWindow.OnLoadoutPressed += (loadoutGroup, loadoutProto) =>
             {

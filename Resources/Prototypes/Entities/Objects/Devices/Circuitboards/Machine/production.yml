@@ -242,6 +242,9 @@
     #   MatterBin: 2 # Frontier
     # stackRequirements:
     #   Manipulator: 2
+    requirements: # Wayfarer: So they can be upgraded.
+      MatterBin: 2
+      Manipulator: 2
     tagRequirements:
       GlassBeaker:
         amount: 1
@@ -975,6 +978,8 @@
     stackRequirements:
       # Manipulator: 3 # Frontier
       Glass: 2
+  - type: PirateBountyItem # Wayfarer
+    id: Gyroscope
 
 - type: entity
   id: PortableGeneratorSuperPacmanMachineCircuitboard
@@ -1370,6 +1375,8 @@
           GlassBeaker:
             amount: 1
             defaultPrototype: Beaker
+    - type: PirateBountyItem # Wayfarer
+      id: BoozeDispenserMachineCircuitboard
 
 - type: entity
   id: CargoTelepadMachineCircuitboard
@@ -1472,6 +1479,8 @@
       Steel: 5
       CableHV: 5
       Uranium: 2
+  - type: PirateBountyItem # Wayfarer
+    id: GravityGenerator
 
 - type: entity
   parent: BaseMachineCircuitboard

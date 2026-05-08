@@ -1,3 +1,4 @@
+using Content.Shared._WF.Traits; // Wayfarer
 using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Organ;
@@ -177,8 +178,10 @@ public sealed partial class IngestionSystem : EntitySystem
     /// </summary>
     /// <param name="food">Entity being eaten</param>
     /// <param name="stomachs">Stomachs available to digest</param>
-    public bool IsDigestibleBy(EntityUid food, List<Entity<StomachComponent, OrganComponent>> stomachs)
+    /// <param name="popup">Should we also display popup text if it exists?</param>
+    public bool IsDigestibleBy(EntityUid food, List<Entity<StomachComponent, OrganComponent>> stomachs, out bool popup)
     {
+        popup = false;
         var ev = new IsDigestibleEvent();
         RaiseLocalEvent(food, ref ev);
 
@@ -187,6 +190,47 @@ public sealed partial class IngestionSystem : EntitySystem
 
         if (ev.Universal)
             return true;
+
+        // Wayfarer
+        var checkedWithTrait = false;
+
+        foreach (var stomach in stomachs)
+        {
+            var isCarnivore = HasComp<CarnivoreComponent>(stomach.Comp2.Body);
+            var isHerbivore = HasComp<HerbivoreComponent>(stomach.Comp2.Body);
+
+            // Let not mess up the default vanilla stuff if we don't have traits, shall we?
+            if (!isCarnivore && !isHerbivore)
+                continue;
+
+            var whitelistToUse =
+                isCarnivore ? stomach.Comp1.CarnivoreDigestible :
+                isHerbivore ? stomach.Comp1.HerbivoreDigestible :
+                null;
+
+            if (ev.SpecialDigestion)
+            {
+                if (whitelistToUse != null &&
+                    _whitelistSystem.IsWhitelistPass(whitelistToUse, food))
+                    return true;
+            }
+            else
+            {
+                if (whitelistToUse == null
+                    || !stomach.Comp1.IsSpecialDigestibleExclusive
+                    || _whitelistSystem.IsWhitelistPass(whitelistToUse, food))
+                    return true;
+            }
+
+            checkedWithTrait = true;
+        }
+
+        if (checkedWithTrait)
+        {
+            popup = true;
+            return false;
+        }
+        // Wayfarer end
 
         if (ev.SpecialDigestion)
         {
@@ -210,6 +254,7 @@ public sealed partial class IngestionSystem : EntitySystem
         }
 
         // If we didn't find a stomach that can digest our food then it doesn't exist.
+        popup = true;
         return false;
     }
 
@@ -229,6 +274,35 @@ public sealed partial class IngestionSystem : EntitySystem
         if (ev.Universal)
             return true;
 
+        // Wayfarer
+        var isCarnivore = HasComp<CarnivoreComponent>(stomach.Comp2.Body);
+        var isHerbivore = HasComp<HerbivoreComponent>(stomach.Comp2.Body);
+
+        // Let not mess up the default vanilla stuff if we don't have traits, shall we?
+        if (isCarnivore || isHerbivore)
+        {
+            var whitelistToUse =
+                isCarnivore ? stomach.Comp1.CarnivoreDigestible :
+                isHerbivore ? stomach.Comp1.HerbivoreDigestible :
+                null;
+
+            if (whitelistToUse is not null)
+            {
+                if (ev.SpecialDigestion)
+                {
+                    return _whitelistSystem.IsWhitelistPass(whitelistToUse, food);
+                }
+
+                if (whitelistToUse == null
+                    || !stomach.Comp1.IsSpecialDigestibleExclusive
+                    || _whitelistSystem.IsWhitelistPass(whitelistToUse, food))
+                {
+                    return true;
+                }
+            }
+        }
+        // Wayfarer end
+
         if (ev.SpecialDigestion)
             return _whitelistSystem.IsWhitelistPass(stomach.Comp1.SpecialDigestible, food);
 
@@ -247,9 +321,9 @@ public sealed partial class IngestionSystem : EntitySystem
             return;
 
         // Can we digest the specific item we're trying to eat?
-        if (!IsDigestibleBy(args.Ingested, stomachs))
+        if (!IsDigestibleBy(args.Ingested, stomachs, out var popup))
         {
-            if (!args.Ingest)
+            if (!args.Ingest || !popup)
                 return;
 
             if (forceFed)
@@ -449,7 +523,7 @@ public sealed partial class IngestionSystem : EntitySystem
 
         var edible = _proto.Index(entity.Comp.Edible);
 
-        _audio.PlayPredicted(edible.UseSound, args.Target, args.User);
+        _audio.PlayPredicted(entity.Comp.UseSound ?? edible.UseSound, args.Target, args.User);
 
         var flavors = _flavorProfile.GetLocalizedFlavorsMessage(entity.Owner, args.Target, args.Split);
 

@@ -30,13 +30,14 @@ namespace Content.Server.Database
     public abstract class ServerDbBase
     {
         private readonly ISawmill _opsLog;
-
+        private IPrototypeManager _protoMan; // Coyote
         public event Action<DatabaseNotification>? OnNotificationReceived;
 
         /// <param name="opsLog">Sawmill to trace log database operations to.</param>
         public ServerDbBase(ISawmill opsLog)
         {
             _opsLog = opsLog;
+            _protoMan = IoCManager.Resolve<IPrototypeManager>(); // Coyote
         }
 
         #region Preferences
@@ -65,7 +66,7 @@ namespace Content.Server.Database
             var profiles = new Dictionary<int, ICharacterProfile>(maxSlot);
             foreach (var profile in prefs.Profiles)
             {
-                profiles[profile.Slot] = ConvertProfiles(profile);
+                profiles[profile.Slot] = ConvertProfiles(profile, _protoMan); // Coyote: add _protoMan
             }
 
             var constructionFavorites = new List<ProtoId<ConstructionPrototype>>(prefs.ConstructionFavorites.Count);
@@ -203,13 +204,13 @@ namespace Content.Server.Database
         public async Task<int?> GetProfileIdAsync(NetUserId userId, int slot)
         {
             await using var db = await GetDb();
-            
+
             var profile = await db.DbContext.Profile
                 .Include(p => p.Preference)
                 .Where(p => p.Preference.UserId == userId.UserId && p.Slot == slot)
                 .Select(p => p.Id)
                 .FirstOrDefaultAsync();
-                
+
             return profile == 0 ? null : profile;
         }
 
@@ -219,7 +220,7 @@ namespace Content.Server.Database
             prefs.SelectedCharacterSlot = newSlot;
         }
 
-        private static HumanoidCharacterProfile ConvertProfiles(Profile profile)
+        private static HumanoidCharacterProfile ConvertProfiles(Profile profile, IPrototypeManager protoMan) // Coyote: add IprototypeManager protoMan
         {
             var jobs = profile.Jobs.ToDictionary(j => new ProtoId<JobPrototype>(j.JobName), j => (JobPriority) j.Priority);
             var antags = profile.Antags.Select(a => new ProtoId<AntagPrototype>(a.AntagName));
@@ -245,8 +246,30 @@ namespace Content.Server.Database
             {
                 foreach (var marking in markingsRaw)
                 {
-                    var parsed = Marking.ParseFromDbString(marking);
+                    //var parsed = Marking.ParseFromDbString(marking);
+                    // Coyote: Marking System Improvements parsing
+                    Marking? ParseFromDbJSON(string input)
+                    {
+                        return new Marking(JsonSerializer.Deserialize<MarkingDTO>(input));
+                    }
 
+                    Marking? ParseFromDbString(string input)
+                    {
+                        if (input.Length == 0) return null;
+                        // if it starts with '{', it's JSON, so deserialize it.
+                        if (input.StartsWith("{")) return ParseFromDbJSON(input);
+                        // otherwise, it's an old string, so parse it using legacy code
+                        // we could force a migration at some point to remove dependance on this old code
+                        var split = input.Split('@');
+                        if (split.Length != 2) return null;
+                        List<Color> colorList = new();
+                        foreach (string color in split[1].Split(','))
+                            colorList.Add(Color.FromHex(color));
+                        var proto = protoMan.Index<MarkingPrototype>(new EntProtoId(split[0])); // Coyote
+                        return new Marking(split[0], colorList, proto.MarkingCategory); // Coyote: add proto.MarkingCategory
+                    }
+                    var parsed = ParseFromDbString(marking);
+                    // Coyote end.
                     if (parsed is null) continue;
 
                     markings.Add(parsed);
@@ -260,6 +283,7 @@ namespace Content.Server.Database
                 var loadout = new RoleLoadout(role.RoleName)
                 {
                     EntityName = role.EntityName,
+                    CrimeReason = role.CrimeReason, // Wayfarer
                 };
 
                 foreach (var group in role.Groups)
@@ -315,7 +339,7 @@ namespace Content.Server.Database
             List<string> markingStrings = new();
             foreach (var marking in appearance.Markings)
             {
-                markingStrings.Add(marking.ToString());
+                markingStrings.Add(JsonSerializer.Serialize(marking.ToDTO())); // Coyote: marking.ToString() to JsonSerializer.Serialize(marking.ToDTO()) since we're using JSON now.
             }
             var markings = JsonSerializer.SerializeToDocument(markingStrings);
 
@@ -368,6 +392,7 @@ namespace Content.Server.Database
                 {
                     RoleName = role,
                     EntityName = loadouts.EntityName ?? string.Empty,
+                    CrimeReason = loadouts.CrimeReason, // Wayfarer
                 };
 
                 foreach (var (group, groupLoadouts) in loadouts.SelectedLoadouts)
@@ -2283,11 +2308,11 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 return;
 
             db.DbContext.WayfarerSafetyDepositBoxItem.RemoveRange(box.Items);
-            
+
             // Set LastWithdrawn to indicate the box is now in the world
             box.LastWithdrawn = DateTime.UtcNow;
             box.LastWithdrawnRoundId = roundId;
-            
+
             await db.DbContext.SaveChangesAsync(cancel);
         }
 
@@ -2302,8 +2327,8 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             // Find boxes that have been withdrawn and have no items for longer than the cutoff period
             var staleBoxes = await db.DbContext.WayfarerSafetyDepositBox
                 .Include(b => b.Items)
-                .Where(b => b.LastWithdrawn != null && 
-                            b.LastWithdrawn < cutoffDate && 
+                .Where(b => b.LastWithdrawn != null &&
+                            b.LastWithdrawn < cutoffDate &&
                             b.Items.Count == 0)
                 .ToListAsync(cancel);
 
@@ -2604,6 +2629,10 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         public async Task AddCommunityGoalContribution(
             int requirementId,
             long amount,
+            Guid? playerUserId = null,
+            string? characterName = null,
+            string? entityPrototypeId = null,
+            int roundId = 0,
             CancellationToken cancel = default)
         {
             await using var db = await GetDb(cancel);
@@ -2615,6 +2644,22 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 return;
 
             req.CurrentAmount += amount;
+
+            if (playerUserId.HasValue && characterName != null)
+            {
+                var contribution = new WayfarerCommunityGoalContribution
+                {
+                    RequirementId = requirementId,
+                    PlayerUserId = playerUserId.Value,
+                    CharacterName = characterName,
+                    EntityPrototypeId = entityPrototypeId ?? req.EntityPrototypeId,
+                    Amount = amount,
+                    RoundId = roundId,
+                    ContributedAt = DateTime.UtcNow,
+                };
+                db.DbContext.WayfarerCommunityGoalContributions.Add(contribution);
+            }
+
             await db.DbContext.SaveChangesAsync(cancel);
         }
 

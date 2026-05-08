@@ -869,13 +869,13 @@ public sealed partial class ChatUIController : UIController
         }
 
         // Play mention sound if a highlight was matched
-        if (highlightMatched && _mentionSoundEnabled && _audio != null)
+        if (highlightMatched && _mentionSoundEnabled && _audio != null && _ghost is not {IsGhost: true})
         {
-            _audio.PlayGlobal("/Audio/_COYOTE/UserInterface/mention.ogg", Filter.Local(), false);
+            _audio.PlayGlobal("/Audio/_CS/UserInterface/mention.ogg", Filter.Local(), false);
         }
 
         // Play LOOC sound notification if enabled and on cooldown
-        if (_loocSoundEnabled && _audio != null && (msg.Channel == ChatChannel.LOOC || msg.Channel == ChatChannel.SubtleLOOC))
+        if (_loocSoundEnabled && _audio != null && _ghost is not {IsGhost: true} && (msg.Channel == ChatChannel.LOOC || msg.Channel == ChatChannel.SubtleLOOC))
         {
             var isOwnMessage = _player.LocalEntity != null && _ent.GetEntity(msg.SenderEntity) == _player.LocalEntity;
             var currentTime = _timing.CurTime;
@@ -884,7 +884,7 @@ public sealed partial class ChatUIController : UIController
             {
                 if ((currentTime - _lastLoocSoundTime) >= SoundCooldown)
                 {
-                    _audio.PlayGlobal("/Audio/_COYOTE/UserInterface/looc_sound.ogg", Filter.Local(), false);
+                    _audio.PlayGlobal("/Audio/_CS/UserInterface/looc_sound.ogg", Filter.Local(), false);
                 }
                 // Reset cooldown timer on each message to avoid interrupting conversations
                 _lastLoocSoundTime = currentTime;
@@ -892,7 +892,7 @@ public sealed partial class ChatUIController : UIController
         }
 
         // Play Subtle sound notification if enabled (for subtle emotes)
-        if (_subtleSoundEnabled && _audio != null && msg.IsSubtle)
+        if (_subtleSoundEnabled && _audio != null && _ghost is not {IsGhost: true} && msg.IsSubtle)
         {
             var isOwnMessage = _player.LocalEntity != null && _ent.GetEntity(msg.SenderEntity) == _player.LocalEntity;
             var currentTime = _timing.CurTime;
@@ -901,7 +901,7 @@ public sealed partial class ChatUIController : UIController
             {
                 if ((currentTime - _lastSubtleSoundTime) >= SoundCooldown)
                 {
-                    _audio.PlayGlobal("/Audio/_COYOTE/UserInterface/subtle_sound.ogg", Filter.Local(), false);
+                    _audio.PlayGlobal("/Audio/_CS/UserInterface/subtle_sound.ogg", Filter.Local(), false);
                 }
                 // Reset cooldown timer on each message to avoid interrupting conversations
                 _lastSubtleSoundTime = currentTime;
