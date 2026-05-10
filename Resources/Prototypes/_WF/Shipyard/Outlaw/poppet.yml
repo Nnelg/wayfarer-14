@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: Nnelg
+# Discord: nnelg
+
+# Maintainer Info
+# GitHub: 
+# Discord: 
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Poppet
+  parent: BaseVesselAntag
+  name: Poppet
+  description: A repurposed solar-powered custodial ship with two hidden cannon, suitable for either smuggling or piracy.
+  price: 34000
+  category: Small
+  group: BlackMarket
+  shuttlePath: /Maps/_WF/Shuttles/Outlaw/poppet.yml
+  guidebookPage: ShipyardPoppet
+  class:
+  - Pirate
+  engine:
+  - Plasma
+  - Solar
+
+- type: gameMap
+  id: Poppet
+  mapName: 'Poppet'
+  mapPath: /Maps/_WF/Shuttles/Outlaw/poppet.yml
+  minPlayers: 0
+  stations:
+    Poppet:
+      stationProto: StandardFrontierAntagVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Moppet SR{1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+            NFPirate: [ 0, 0 ]

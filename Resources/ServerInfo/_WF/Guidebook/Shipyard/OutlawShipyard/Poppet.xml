@@ -1,0 +1,54 @@
+<Document>
+  # POPPET-CLASS OUTLAW MAID SHUTTLE
+  <Box>
+    <GuideEntityEmbed Entity="ShuttleGunPirateCannon" Caption="Negotiate"/>
+    <GuideEntityEmbed Entity="CrateGenericSteel" Caption="Rob"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ShuttleMapPoppet" Caption="Maid for Crime"/>
+  </Box>
+
+  [color=#a4885c]Ship Size:[/color] Small
+
+  [color=#a4885c]Recommended Crew:[/color] 1-3
+
+  [color=#a4885c]Power Gen Type:[/color] Plasma + Solar
+
+  # Shuttle Brief
+
+  A ship design intended to be the workhorse of custodial duties in the sector—now repurposed for making messes instead of cleaning them.
+
+  # Ship Functions
+
+  The Poppet comes with three cargo racks, and two cannon with blast doors to hide them from external inspection, in addition to simple logic gates to prevent accidental firing when the ports are closed.
+  
+  The cockpit has an array of buttons for ship control. From left to right, they are:
+  [bullet/] Toggle Engines (Yellow Frame)
+  [bullet/] Toggle Cockpit Shutters (Grey Frame)
+  [bullet/] Fire Port Gun (Red Frame)
+  [bullet/] Toggle Gunport Doors (Yellow Frame)
+  [bullet/] Fire Starboard Gun (Red Frame)
+  
+  Note that the solar array does not produce sufficient power for continuous thruster operation. Use the thruster power toggle button on the bridge to disable thrusters when docked if attempting to operate without refueling.
+
+
+  # Cargo
+
+  [textlink="Cargo Hauling" link="CargoHauling"/]
+
+  # Piloting
+
+  [textlink="Piloting" link="Piloting"/]
+
+  [textlink="Sector Topology" link="SectorTopology"/]
+
+  # Hiring crew
+
+  [textlink="Hiring" link="Hiring"/]
+
+  As a Captain of a Spacefaring vessel, you have the authority to hire, fire, demote, or promote crew members at will.
+
+  # PREFLIGHT CHECKLIST
+
+  [textlink="Preflight Checklist" link="PreflightChecklist"/]
+</Document>

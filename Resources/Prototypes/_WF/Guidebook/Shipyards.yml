@@ -119,6 +119,7 @@
   children:
   - ShipyardDagger
   - ShipyardLooter
+  - ShipyardPoppet
 
 - type: guideEntry
   id: ScrapShipyard
