@@ -279,3 +279,8 @@
   id: ShipyardMoppet
   name: guide-entry-shipyard-moppet
   text: "/ServerInfo/_WF/Guidebook/Shipyard/StaffShipyard/Moppet.xml"
+
+- type: guideEntry
+  id: ShipyardPoppet
+  name: guide-entry-shipyard-poppet
+  text: "/ServerInfo/_WF/Guidebook/Shipyard/OutlawShipyard/Poppet.xml"
