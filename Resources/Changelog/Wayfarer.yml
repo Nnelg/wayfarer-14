@@ -2966,3 +2966,142 @@ Entries:
   id: 6837
   time: '2026-05-07T02:58:48.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/809
+- author: DevArchwave
+  changes:
+    - type: Add
+      message: Horny encryption keys have been added to loadout.
+    - type: Tweak
+      message: Loadout cartridge prices decreased.
+    - type: Tweak
+      message: Paramedic jumpsuit price decreased.
+    - type: Tweak
+      message: >-
+        Maximum number of encryption keys both for IPCs and for headsets
+        increased to 13 from 10.
+  id: 6838
+  time: '2026-05-08T02:55:50.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/810
+- author: Khaomi
+  changes:
+    - type: Fix
+      message: Fixed lizard's sigh sound
+  id: 6839
+  time: '2026-05-08T02:56:29.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/812
+- author: TheSlapper
+  changes:
+    - type: Tweak
+      message: (Miles) Reduced instances of IFF consoles as loot.
+  id: 6840
+  time: '2026-05-08T02:57:05.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/802
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: >-
+        The custom examine menu can now only be accessed through right clicking
+        yourself, instead of pressing the action button.
+  id: 6841
+  time: '2026-05-08T06:04:51.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/821
+- author: drraccoony
+  changes:
+    - type: Add
+      message: Added WFClayBody Quirk
+  id: 6842
+  time: '2026-05-08T14:03:06.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/820
+- author: Luweth
+  changes:
+    - type: Tweak
+      message: Changed a missed button to not be clickable through walls in maints.
+    - type: Fix
+      message: EVA bridge grid atmos pressure bug. Cleaned up airlock.
+  id: 6843
+  time: '2026-05-08T14:07:35.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/819
+- author: TheSlapper
+  changes:
+    - type: Add
+      message: (Miles) Ported numerous clothing items from Starlight
+  id: 6844
+  time: '2026-05-09T16:48:59.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/826
+- author: drraccoony
+  changes:
+    - type: Add
+      message: Added in-game ability to read commends
+    - type: Tweak
+      message: Commend improvements
+  id: 6845
+  time: '2026-05-09T16:49:17.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/822
+- author: VVersengt
+  changes:
+    - type: Tweak
+      message: EMPs will no longer disable radios.
+    - type: Tweak
+      message: 40mm EMP will now disable devices for 30 seconds instead of 12
+  id: 6846
+  time: '2026-05-09T17:31:18.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/831
+- author: drraccoony
+  changes:
+    - type: Tweak
+      message: >-
+        Changed Hoverbikes. Riders have a 70% chance of knockdown upon taking
+        damage while riding.
+  id: 6847
+  time: '2026-05-10T00:46:13.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/833
+- author: VVersengt
+  changes:
+    - type: Add
+      message: Hypospray to DoC and Brigmedic.
+    - type: Tweak
+      message: >-
+        Changed CGP loadouts so they have patrol suits and gave them access to
+        the gun loadouts like everyone else.
+    - type: Add
+      message: White variant of combat gloves.
+    - type: Add
+      message: 'STC is now mindshielded. '
+  id: 6848
+  time: '2026-05-10T00:48:25.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/825
+- author: drraccoony
+  changes:
+    - type: Fix
+      message: Fixed Spacehulk spawn lagspike
+  id: 6849
+  time: '2026-05-10T00:48:38.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/817
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: >-
+        Artifact teleport effect now checks for non-ssd targets and had its
+        range decreased.
+    - type: Tweak
+      message: >-
+        Artifact explosion weights reduced a little, in favor of a healing
+        effect.
+    - type: Tweak
+      message: Duration of artifact polymorph effects halved.
+  id: 6850
+  time: '2026-05-10T00:50:52.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/818
+- author: JustKaits
+  changes:
+    - type: Add
+      message: Rui added guidebook sprite
+  id: 6851
+  time: '2026-05-10T02:24:30.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/630
+- author: Whisper
+  changes:
+    - type: Add
+      message: Added all silicon/borg emotes to IPC
+  id: 6852
+  time: '2026-05-11T02:28:58.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/827
