@@ -6,7 +6,7 @@
   - MailCarrierClothingUniformJumpskirtMailCarrier
   - MailCarrierClothingUniformJumpsuitMilitaryMailCarrier
   subgroups:
-  - WFJumpsuit # WF
+  - WFJumpsuit # Wayfarer
   fallbacks:
   - MailCarrierClothingUniformJumpsuitMailCarrier
   - MailCarrierClothingUniformJumpskirtMailCarrier
