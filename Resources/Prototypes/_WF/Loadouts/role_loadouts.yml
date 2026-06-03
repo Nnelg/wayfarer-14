@@ -52,7 +52,7 @@
   id: JobMailCarrier
   groups:
   - MailCarrierJumpsuit
-  - WFGloves # WF: ContractorGloves -> WFGloves
+  - WFGloves
   - MailCarrierBackpack
   - MailCarrierOuterClothing
   - MailCarrierForcedOuterClothing
