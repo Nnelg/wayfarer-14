@@ -5,7 +5,7 @@
   - ValetClothingUniformJumpsuitValet
   - ValetClothingUniformJumpskirtValet
   subgroups:
-  - WFJumpsuit # WF
+  - WFJumpsuit # Wayfarer
   fallbacks:
   - ValetClothingUniformJumpsuitValet
   - ValetClothingUniformJumpskirtValet
