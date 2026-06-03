@@ -8,7 +8,7 @@
   - JanitorNFClothingHeadHatCone
   - JanitorNFGoldenPlunger
   subgroups:
-  - WFHead # WF
+  - WFHead # Wayfarer
 
 - type: loadoutGroup
   id: JanitorNFJumpsuit
