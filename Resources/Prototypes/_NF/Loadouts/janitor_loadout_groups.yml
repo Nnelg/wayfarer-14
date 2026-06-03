@@ -17,7 +17,7 @@
   - JanitorNFClothingUniformJumpsuitJanitor
   - JanitorNFClothingUniformJumpskirtJanitor
   subgroups:
-  - WFJumpsuit # WF
+  - WFJumpsuit # Wayfarer
   fallbacks:
   - JanitorNFClothingUniformJumpsuitJanitor
   - JanitorNFClothingUniformJumpskirtJanitor
