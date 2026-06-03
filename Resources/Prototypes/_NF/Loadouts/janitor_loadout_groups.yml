@@ -50,6 +50,6 @@
   - JanitorNFClothingBackpackDuffelJanitor
   - JanitorClothingBackpackMessengerJanitor
   subgroups:
-  - WFBackpack # WF: ContractorBackpack -> WFBackpack
+  - WFBackpack # Wayfarer: ContractorBackpack<WFBackpack
   fallbacks:
   - JanitorClothingBackpackMessengerJanitor
