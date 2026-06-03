@@ -19,7 +19,7 @@
   - MailCarrierClothingOuterWinterCoatMail
   - MailCarrierClothingOuterEVASuitMailman
   subgroups:
-  - WFOuterClothing # WF
+  - WFOuterClothing # Wayfarer
 
 - type: loadoutGroup
   id: MailCarrierBackpack
