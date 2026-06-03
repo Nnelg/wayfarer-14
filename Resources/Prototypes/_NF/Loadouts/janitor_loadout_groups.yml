@@ -31,7 +31,7 @@
   - JanitorNFClothingHandsGlovesColorOrange
   - JanitorNFClothingHandsGlovesColorPurple
   subgroups:
-  - WFGloves # WF
+  - WFGloves # Wayfarer
 
 - type: loadoutGroup
   id: JanitorNFOuterClothing
