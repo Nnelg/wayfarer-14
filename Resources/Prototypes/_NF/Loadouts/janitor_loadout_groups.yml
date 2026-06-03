@@ -41,7 +41,7 @@
   - JanitorNFClothingOuterWinterJani
   - JanitorNFWetFloorSign
   subgroups:
-  - WFOuterClothing # WF
+  - WFOuterClothing # Wayfarer
 
 - type: loadoutGroup
   id: JanitorBackpack
