@@ -4,6 +4,8 @@
   loadouts:
   - StcClothingUniformJumpsuitDetectiveGrey
   - StcClothingUniformJumpskirtDetectiveGrey
+  subgroups:
+  - WFJumpsuit # WF
   fallbacks:
   - StcClothingUniformJumpsuitDetectiveGrey
   - StcClothingUniformJumpskirtDetectiveGrey

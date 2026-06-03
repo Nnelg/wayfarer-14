@@ -5,6 +5,8 @@
   - MailCarrierClothingUniformJumpsuitMailCarrier
   - MailCarrierClothingUniformJumpskirtMailCarrier
   - MailCarrierClothingUniformJumpsuitMilitaryMailCarrier
+  subgroups:
+  - WFJumpsuit # WF
   fallbacks:
   - MailCarrierClothingUniformJumpsuitMailCarrier
   - MailCarrierClothingUniformJumpskirtMailCarrier
@@ -16,6 +18,8 @@
   loadouts:
   - MailCarrierClothingOuterWinterCoatMail
   - MailCarrierClothingOuterEVASuitMailman
+  subgroups:
+  - WFOuterClothing # WF
 
 - type: loadoutGroup
   id: MailCarrierBackpack
