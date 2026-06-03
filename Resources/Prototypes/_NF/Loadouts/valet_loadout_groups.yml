@@ -16,6 +16,6 @@
   loadouts:
   - ValetClothingOuterVestValet
   subgroups:
-  - WFOuterClothing # WF
+  - WFOuterClothing # Wayfarer
   fallbacks:
   - ValetClothingOuterVestValet
