@@ -5,7 +5,7 @@
   - StcClothingUniformJumpsuitDetectiveGrey
   - StcClothingUniformJumpskirtDetectiveGrey
   subgroups:
-  - WFJumpsuit # WF
+  - WFJumpsuit # Wayfarer
   fallbacks:
   - StcClothingUniformJumpsuitDetectiveGrey
   - StcClothingUniformJumpskirtDetectiveGrey
