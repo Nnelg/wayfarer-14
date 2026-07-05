@@ -17,7 +17,7 @@
     tags:
     - Recyclable
     - WhitelistChameleon
-    - WhitelistWallet # Wayfarer-14
+    - WhitelistWallet # Wayfarer
 
 # region reporter
 - type: entity
