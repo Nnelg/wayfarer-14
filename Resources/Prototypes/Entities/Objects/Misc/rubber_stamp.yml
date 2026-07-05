@@ -25,6 +25,9 @@
     delays: # Frontier
       stamp:
         length: 1.0 # Frontier: 1 second between stampings, avoid spam for reapplied stamps
+  - type: Tag # Wayfarer-14
+    tags: # Wayfarer-14
+    - WhitelistWallet # Wayfarer-14
 
 - type: entity
   name: alternate rubber stamp
