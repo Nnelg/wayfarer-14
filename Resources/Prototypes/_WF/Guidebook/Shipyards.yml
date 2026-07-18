@@ -41,6 +41,7 @@
   - ShipyardDioddef
   - ShipyardDowntownsuperstar
   - ShipyardDragoon # FrontierShip Resources/Prototypes/_NF/Guidebook/shipyard.yml
+  - ShipyardFelix
   - ShipyardFirefighter # FrontierShip Resources/Prototypes/_NF/Guidebook/shipyard.yml
   - ShipyardGarden # FrontierShip Resources/Prototypes/_NF/Guidebook/shipyard.yml
   - ShipyardGasbender # FrontierShip Resources/Prototypes/_NF/Guidebook/shipyard.yml
@@ -135,9 +136,11 @@
   text: "/ServerInfo/_WF/Guidebook/Shipyard/OutlawShipyard.xml"
   priority: 7
   children:
-  - ShipyardDagger
-  - ShipyardLooter
   - ShipyardBocaskreeo
+  - ShipyardDagger
+  - ShipyardInfelix
+  - ShipyardLooter
+  - ShipyardPoppet
   - ShipyardVeliola
 
 - type: guideEntry
@@ -187,7 +190,7 @@
 
 - type: guideEntry
   id: ShipyardBucklerV
-  name: guide-entry-shipyard-buckler
+  name: guide-entry-shipyard-buckler-vox
   text: "/ServerInfo/_WF/Guidebook/Shipyard/CgpShipyard/Bucklervox.xml"
 
 - type: guideEntry
@@ -204,6 +207,11 @@
   id: ShipyardDioddef
   name: guide-entry-shipyard-dioddef
   text: "/ServerInfo/_WF/Guidebook/Shipyard/CivShipyard/Dioddef.xml"
+
+- type: guideEntry
+  id: ShipyardFelix
+  name: guide-entry-shipyard-felix
+  text: "/ServerInfo/_WF/Guidebook/Shipyard/CivShipyard/Felix.xml"
 
 - type: guideEntry
   id: ShipyardGrandqueen
@@ -239,6 +247,11 @@
   id: ShipyardIcarus
   name: guide-entry-shipyard-icarus
   text: "/ServerInfo/_WF/Guidebook/Shipyard/ScrapShipyard/Icarus.xml"
+
+- type: guideEntry
+  id: ShipyardInfelix
+  name: guide-entry-shipyard-infelix
+  text: "/ServerInfo/_WF/Guidebook/Shipyard/OutlawShipyard/Infelix.xml"
 
 - type: guideEntry
   id: ShipyardKite
@@ -324,6 +337,11 @@
   id: ShipyardMoppet
   name: guide-entry-shipyard-moppet
   text: "/ServerInfo/_WF/Guidebook/Shipyard/StaffShipyard/Moppet.xml"
+
+- type: guideEntry
+  id: ShipyardPoppet
+  name: guide-entry-shipyard-poppet
+  text: "/ServerInfo/_WF/Guidebook/Shipyard/OutlawShipyardShipyard/Poppet.xml"
 
 - type: guideEntry
   id: ShipyardKobold
