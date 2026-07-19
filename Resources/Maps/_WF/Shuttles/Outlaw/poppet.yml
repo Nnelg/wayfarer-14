@@ -2072,8 +2072,6 @@ entities:
       access:
       - - Pirate
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 413
       - 349
@@ -2086,8 +2084,6 @@ entities:
       access:
       - - Pirate
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 413
       - 349
@@ -2124,8 +2120,6 @@ entities:
       access:
       - - Pirate
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 413
       - 349
@@ -2654,8 +2648,6 @@ entities:
       pos: 1.5,-0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 413
     - type: AtmosPipeLayers
