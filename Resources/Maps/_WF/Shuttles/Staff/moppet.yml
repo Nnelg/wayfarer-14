@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 07/18/2026 18:00:40
-  entityCount: 501
+  time: 07/19/2026 16:36:35
+  entityCount: 502
 maps: []
 grids:
 - 1
@@ -276,6 +276,13 @@ entities:
       - 307
     - type: Fixtures
       fixtures: {}
+- proto: AirGrenade
+  entities:
+  - uid: 487
+    components:
+    - type: Transform
+      pos: 8.5,-2.5
+      parent: 1
 - proto: AirlockCommandGlass
   entities:
   - uid: 243
@@ -739,10 +746,15 @@ entities:
       parent: 1
 - proto: Bucket
   entities:
-  - uid: 365
+  - uid: 315
     components:
     - type: Transform
-      pos: 0.5,-6.5
+      pos: 0.3,-6.05
+      parent: 1
+  - uid: 495
+    components:
+    - type: Transform
+      pos: 0.75,-6.25
       parent: 1
 - proto: ButtonFrameCautionSecurity
   entities:
@@ -1653,6 +1665,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 5.5,-2.5
       parent: 1
+- proto: CrateServiceKitCleanades
+  entities:
+  - uid: 365
+    components:
+    - type: Transform
+      pos: -0.5,-5.5
+      parent: 1
 - proto: CrateTrashCartJani
   entities:
   - uid: 408
@@ -1675,6 +1694,25 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,-6.5
+      parent: 1
+- proto: DecalSpawnerBurns
+  entities:
+  - uid: 360
+    components:
+    - type: Transform
+      pos: 8.5,-4.5
+      parent: 1
+- proto: DecalSpawnerDirtNear
+  entities:
+  - uid: 310
+    components:
+    - type: Transform
+      pos: 1.5,-4.5
+      parent: 1
+  - uid: 457
+    components:
+    - type: Transform
+      pos: 3.5,-4.5
       parent: 1
 - proto: DefibrillatorCabinetFilled
   entities:
@@ -1820,26 +1858,6 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-  - uid: 360
-    components:
-    - type: Transform
-      pos: 5.5,-2.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
-- proto: FloorWaterEntity
-  entities:
-  - uid: 310
-    components:
-    - type: Transform
-      pos: -0.5,-6.5
-      parent: 1
-  - uid: 315
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 0.5,-6.5
-      parent: 1
 - proto: FoodPlate
   entities:
   - uid: 338
@@ -2481,7 +2499,7 @@ entities:
       parent: 1
 - proto: LockerWallMaterialsBasicFilled
   entities:
-  - uid: 341
+  - uid: 323
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -2494,6 +2512,16 @@ entities:
     - type: Transform
       pos: 5.5,-2.5
       parent: 1
+- proto: Mirror
+  entities:
+  - uid: 479
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,-7.5
+      parent: 1
+    - type: Fixtures
+      fixtures: {}
 - proto: MirrorModern
   entities:
   - uid: 29
@@ -2910,16 +2938,6 @@ entities:
           - Toggle
     - type: Fixtures
       fixtures: {}
-- proto: SignEVA
-  entities:
-  - uid: 487
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-7.5
-      parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: SignJanitor
   entities:
   - uid: 448
@@ -2931,11 +2949,11 @@ entities:
       fixtures: {}
 - proto: SinkWide
   entities:
-  - uid: 323
+  - uid: 364
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.5,-5.5
+      rot: 3.141592653589793 rad
+      pos: 0.5,-6.5
       parent: 1
 - proto: SMESBasic
   entities:
@@ -2946,7 +2964,7 @@ entities:
       parent: 1
 - proto: SoapDeluxe
   entities:
-  - uid: 364
+  - uid: 341
     components:
     - type: Transform
       pos: -0.5,-6.5
@@ -3115,9 +3133,9 @@ entities:
     - type: Transform
       pos: 9.5,-12.5
       parent: 1
-- proto: SpawnPointWayfarerInterview
+- proto: SpawnPointLatejoin
   entities:
-  - uid: 479
+  - uid: 456
     components:
     - type: Transform
       pos: -3.5,-4.5
@@ -3127,22 +3145,22 @@ entities:
   - uid: 493
     components:
     - type: Transform
-      pos: 0.26511502,-5.2455597
+      pos: 0.25,-5.25
       parent: 1
   - uid: 497
     components:
     - type: Transform
-      pos: 0.23963642,-5.5190077
+      pos: 0.3,-5.6
       parent: 1
   - uid: 498
     components:
     - type: Transform
-      pos: 0.6146364,-5.300106
+      pos: 0.7,-5.35
       parent: 1
   - uid: 499
     components:
     - type: Transform
-      pos: 0.6146364,-5.565915
+      pos: 0.75,-5.7
       parent: 1
 - proto: Spoon
   entities:
@@ -3535,11 +3553,6 @@ entities:
       parent: 1
 - proto: Windoor
   entities:
-  - uid: 457
-    components:
-    - type: Transform
-      pos: 0.5,-5.5
-      parent: 1
   - uid: 458
     components:
     - type: Transform
@@ -3555,15 +3568,10 @@ entities:
       parent: 1
 - proto: WindowFrostedDirectional
   entities:
-  - uid: 456
-    components:
-    - type: Transform
-      pos: -0.5,-5.5
-      parent: 1
   - uid: 475
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 0.5,-6.5
+      rot: 3.141592653589793 rad
+      pos: -0.5,-6.5
       parent: 1
 ...

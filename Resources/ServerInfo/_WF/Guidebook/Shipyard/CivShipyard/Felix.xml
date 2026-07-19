@@ -38,6 +38,20 @@
 	
     [bullet/] [bold]4:[/bold] Docking port bolt toggle.
 
+  # Upgrade Requirements
+  
+  The Felix has 8 thrusters, requiring a total of 32 capacitors.
+  
+  Its generator and gyro together require 2 capacitors and 2 manipulators.
+  
+  Its SMES requires 1 capacitor and 4 power cells (or 2 capacitors and 8 power cells for advanced SMES).
+  
+  Its fab and processing machinery together require 9 manipulators and 5 matter bins.
+  
+  It has 25 solar panels, requiring a total of 50 glass.
+  
+  Overall, this means its full upgrade (including advanced SMES) requires: [bold]36[/bold] capacitors, [bold]11[/bold] manipulators, [bold]5[/bold] matter bins, [bold]8[/bold] power cells, and [bold]50[/bold] glass.
+
   # Mining
 
   [textlink="Mining" link="Mining"/]

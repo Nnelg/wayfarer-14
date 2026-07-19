@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: RBS Felix
   description: A small, solar powered mining vessel.
-  price: 23000
+  price: 35000
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_WF/Shuttles/Civilian/felix.yml

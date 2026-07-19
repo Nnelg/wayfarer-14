@@ -38,6 +38,20 @@
 	
     [bullet/] [bold]4:[/bold] Docking port bolt toggle.
 
+  # Upgrade Requirements
+  
+  The Moppet has 10 thrusters, requiring a total of 40 capacitors.
+  
+  Its generator and gyro together require 2 capacitors and 2 manipulators.
+  
+  Its SMES requires 1 capacitor and 4 power cells (or 2 capacitors and 8 power cells for advanced SMES).
+  
+  Its fab and material reclaimer together require 4 manipulators and 2 matter bins.
+  
+  It has 30 solar panels, requiring a total of 60 glass.
+  
+  Overall, this means its full upgrade (including advanced SMES) requires: [bold]44[/bold] capacitors, [bold]6[/bold] manipulators, [bold]2[/bold] matter bins, [bold]8[/bold] power cells, and [bold]60[/bold] glass.
+
   # Janitor
 
   [textlink="Janitor" link="Janitor"/]

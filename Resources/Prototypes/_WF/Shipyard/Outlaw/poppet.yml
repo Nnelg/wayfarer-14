@@ -13,7 +13,7 @@
   parent: BaseVesselAntag
   name: RBS Poppet
   description: A robust Janitorial ship commissioned by Zekke's Maid Guild to become the new workhorse of cleaning services in the sector - but used for crime instead.
-  price: 33700
+  price: 40000
   category: Small
   group: BlackMarket
   shuttlePath: /Maps/_WF/Shuttles/Outlaw/poppet.yml

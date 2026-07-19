@@ -11,9 +11,9 @@
 - type: vessel
   id: Moppet
   parent: BaseVessel
-  name: ZKW Moppet
+  name: RBS Moppet
   description: A robust Janitorial ship commissioned by Zekke's Maid Guild to become the new workhorse of cleaning services in the sector.
-  price: 27500
+  price: 32000
   category: Small
   group: Sr
   access: Janitor
@@ -27,7 +27,7 @@
 
 - type: gameMap
   id: Moppet
-  mapName: 'ZKW Moppet'
+  mapName: 'RBS Moppet'
   mapPath: /Maps/_WF/Shuttles/Staff/moppet.yml
   minPlayers: 0
   stations:
@@ -41,4 +41,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            WayfarerInterview: [ 0, 0 ]
+            NFJanitor: [ 0, 0 ]

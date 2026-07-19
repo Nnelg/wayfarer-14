@@ -40,11 +40,23 @@
 	
     [bullet/] [bold]5:[/bold] Open gun port doors.
 	
-    [bullet/] [bold]6:[/bold] Fire cannon (with door safety check).
+    [bullet/] [bold]6:[/bold] Close gun port doors.
 	
-    [bullet/] [bold]7:[/bold] Close gun port doors.
+    [bullet/] [bold]7:[/bold] Fire cannon (with door safety check).
 	
     [bullet/] [bold]8:[/bold] Fire cannon (override door safety check).
+
+  # Upgrade Requirements
+  
+  The Poppet has 10 thrusters, requiring a total of 40 capacitors.
+  
+  Its generator and gyro together require 2 capacitors and 2 manipulators.
+  
+  Its SMES requires 1 capacitor and 4 power cells (or 2 capacitors and 8 power cells for advanced SMES).
+  
+  It has 30 solar panels, requiring a total of 60 glass.
+  
+  Overall, this means its full upgrade (including advanced SMES) requires: [bold]44[/bold] capacitors, [bold]4[/bold] manipulators, [bold]8[/bold] power cells, and [bold]60[/bold] glass.
 
   # Piloting
 
