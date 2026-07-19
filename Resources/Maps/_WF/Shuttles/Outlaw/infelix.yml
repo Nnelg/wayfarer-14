@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 07/18/2026 23:49:50
-  entityCount: 413
+  time: 07/19/2026 00:24:20
+  entityCount: 414
 maps: []
 grids:
 - 1
@@ -1424,6 +1424,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,2.5
       parent: 1
+- proto: ContrabandAppraisalToolPirate
+  entities:
+  - uid: 393
+    components:
+    - type: Transform
+      pos: -2.5,3.5
+      parent: 1
 - proto: ConveyorBelt
   entities:
   - uid: 20
@@ -2271,14 +2278,6 @@ entities:
     - type: Transform
       pos: 3.5,2.5
       parent: 1
-- proto: NFMagnetBoxTreasure
-  entities:
-  - uid: 393
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,4.5
-      parent: 1
 - proto: NitrogenCanister
   entities:
   - uid: 25
@@ -2704,6 +2703,13 @@ entities:
     components:
     - type: Transform
       pos: 7.5,1.5
+      parent: 1
+- proto: SpawnMechEMU
+  entities:
+  - uid: 414
+    components:
+    - type: Transform
+      pos: -3.5,3.5
       parent: 1
 - proto: SpawnPointWayfarerInterview
   entities:

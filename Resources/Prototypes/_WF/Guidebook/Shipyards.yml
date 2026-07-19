@@ -289,6 +289,11 @@
   text: "/ServerInfo/_WF/Guidebook/Shipyard/CivShipyard/Mjolnir.xml"
 
 - type: guideEntry
+  id: ShipyardMoppet
+  name: guide-entry-shipyard-moppet
+  text: "/ServerInfo/_WF/Guidebook/Shipyard/StaffShipyard/Moppet.xml"
+
+- type: guideEntry
   id: ShipyardParma
   name: guide-entry-shipyard-parma
   text: "/ServerInfo/_WF/Guidebook/Shipyard/CgpShipyard/Parma.xml"
@@ -297,6 +302,11 @@
   id: ShipyardPhalanx
   name: guide-entry-shipyard-phalanx
   text: "/ServerInfo/_WF/Guidebook/Shipyard/CgpShipyard/Phalanx.xml"
+
+- type: guideEntry
+  id: ShipyardPoppet
+  name: guide-entry-shipyard-poppet
+  text: "/ServerInfo/_WF/Guidebook/Shipyard/OutlawShipyard/Poppet.xml"
 
 - type: guideEntry
   id: ShipyardPridwen
@@ -332,16 +342,6 @@
   id: ShipyardSwan
   name: guide-entry-shipyard-swan
   text: "/ServerInfo/_WF/Guidebook/Shipyard/CivShipyard/Swan.xml"
-
-- type: guideEntry
-  id: ShipyardMoppet
-  name: guide-entry-shipyard-moppet
-  text: "/ServerInfo/_WF/Guidebook/Shipyard/StaffShipyard/Moppet.xml"
-
-- type: guideEntry
-  id: ShipyardPoppet
-  name: guide-entry-shipyard-poppet
-  text: "/ServerInfo/_WF/Guidebook/Shipyard/OutlawShipyardShipyard/Poppet.xml"
 
 - type: guideEntry
   id: ShipyardKobold
