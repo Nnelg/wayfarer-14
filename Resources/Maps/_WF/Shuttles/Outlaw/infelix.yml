@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 07/19/2026 19:26:16
+  time: 07/20/2026 01:16:47
   entityCount: 443
 maps: []
 grids:
@@ -2229,15 +2229,15 @@ entities:
       parent: 1
 - proto: LightTubeCrystalGreen
   entities:
-  - uid: 147
+  - uid: 413
     components:
     - type: Transform
-      parent: 146
+      parent: 147
     - type: Physics
       canCollide: False
 - proto: LightTubeCrystalRed
   entities:
-  - uid: 413
+  - uid: 146
     components:
     - type: Transform
       parent: 94
@@ -2561,7 +2561,21 @@ entities:
   - uid: 94
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
+      pos: -9.5,1.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        light_bulb: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: 146
+    - type: ApcPowerReceiver
+      powerLoad: 60
+    - type: DamageOnInteract
+      isDamageActive: False
+  - uid: 147
+    components:
+    - type: Transform
       pos: 10.5,1.5
       parent: 1
     - type: ContainerContainer
@@ -2570,21 +2584,6 @@ entities:
           showEnts: False
           occludes: True
           ent: 413
-    - type: ApcPowerReceiver
-      powerLoad: 60
-    - type: DamageOnInteract
-      isDamageActive: False
-  - uid: 146
-    components:
-    - type: Transform
-      pos: -9.5,1.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        light_bulb: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 147
     - type: ApcPowerReceiver
       powerLoad: 60
     - type: DamageOnInteract
