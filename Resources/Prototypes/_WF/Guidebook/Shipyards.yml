@@ -155,6 +155,7 @@
   - ShipyardIcarus
   - ShipyardRatrod
   - ShipyardTide # FrontierShip Resources/Prototypes/_NF/Guidebook/shipyard.yml
+  - ShipyardZipper
 
 - type: guideEntry
   id: StaffShipyard
@@ -357,3 +358,8 @@
   id: ShipyardVeliola
   name: guide-entry-shipyard-veliola
   text: "/ServerInfo/_WF/Guidebook/Shipyard/OutlawShipyard/Veliola.xml"
+
+- type: guideEntry
+  id: ShipyardZipper
+  name: guide-entry-shipyard-zipper
+  text: "/ServerInfo/_WF/Guidebook/Shipyard/ScrapShipyard/Zipper.xml"
