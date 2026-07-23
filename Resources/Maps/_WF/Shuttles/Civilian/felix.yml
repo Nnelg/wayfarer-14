@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 07/21/2026 04:56:10
+  time: 07/23/2026 14:24:58
   entityCount: 416
 maps: []
 grids:
@@ -2415,17 +2415,33 @@ entities:
       parent: 1
 - proto: SignalButton
   entities:
-  - uid: 11
+  - uid: 250
     components:
     - type: Transform
-      pos: -3.75,5.5
+      rot: 3.141592653589793 rad
+      pos: -3.5,-1.5
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        278:
+        234:
         - - Pressed
           - Toggle
-        279:
+        233:
+        - - Pressed
+          - Toggle
+    - type: Fixtures
+      fixtures: {}
+- proto: SignalButtonDirectional
+  entities:
+  - uid: 11
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 2.5,4.25
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        366:
         - - Pressed
           - Toggle
     - type: Fixtures
@@ -2433,15 +2449,20 @@ entities:
   - uid: 246
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,-2.5
+      rot: -1.5707963267948966 rad
+      pos: 2.5,4.75
       parent: 1
+    - type: SignalSwitch
+      state: True
     - type: DeviceLinkSource
       linkedPorts:
-        244:
+        367:
         - - Pressed
           - Toggle
-        243:
+        368:
+        - - Pressed
+          - Toggle
+        369:
         - - Pressed
           - Toggle
     - type: Fixtures
@@ -2462,37 +2483,18 @@ entities:
           - Toggle
     - type: Fixtures
       fixtures: {}
-  - uid: 250
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -3.5,-1.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        234:
-        - - Pressed
-          - Toggle
-        233:
-        - - Pressed
-          - Toggle
-    - type: Fixtures
-      fixtures: {}
   - uid: 373
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,4.75
+      rot: 3.141592653589793 rad
+      pos: -1.5,-2.5
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        367:
+        244:
         - - Pressed
           - Toggle
-        368:
-        - - Pressed
-          - Toggle
-        369:
+        243:
         - - Pressed
           - Toggle
     - type: Fixtures
@@ -2500,12 +2502,14 @@ entities:
   - uid: 374
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,4.25
+      pos: -3.75,5.5
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        366:
+        278:
+        - - Pressed
+          - Toggle
+        279:
         - - Pressed
           - Toggle
     - type: Fixtures
