@@ -53,6 +53,19 @@
         - !type:OrganType
           type: Vox
           shouldHave: true
+    Poison:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Vox
+          shouldHave: false
+        - !type:OrganType
+          type: Avali
+          shouldHave: false
+        damage:
+          types:
+            Caustic: 0.5 # half as much as raw ammonia
   # End Wayfarer
 
 - type: reagent
