@@ -1,6 +1,8 @@
 - type: vendingMachineInventory
   id: AutoTuneVendInventory
   startingInventory:
+    WFRadioReceiver: 20 # Wayfarer
+    WFRadioBroadcastConsoleFlatpack: 10 # Wayfarer
     TrumpetInstrument: 2
     TromboneInstrument: 2
     FrenchHornInstrument: 2

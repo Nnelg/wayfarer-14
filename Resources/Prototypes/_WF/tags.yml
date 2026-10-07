@@ -17,6 +17,9 @@
   id: CandleRed
 
 - type: Tag
+  id: CandleInfinite
+
+- type: Tag
   id: DataChit
 
 - type: Tag
@@ -50,4 +53,13 @@
   id: WFMerchantUplink # Denoted for use within the merchant uplink
 
 - type: Tag
-  id: WhitelistWallet
+  id: WFStickFood # Used for recipes involving stabbing a stick into the food (typically fried)
+
+#- type: Tag
+#  id: WhitelistWallet #use FitsWallet instead
+
+- type: Tag
+  id: ZekkeCredit
+
+- type: Tag
+  id: FoldedSign

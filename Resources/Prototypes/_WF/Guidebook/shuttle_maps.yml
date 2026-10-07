@@ -275,6 +275,17 @@
 
 - type: entity
   parent: PosterBase
+  id: ShuttleMapDIRELogo
+  name: "DIRELogo"
+  description: "Detailed splash page of DIRE Industries personal shuttle."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _WF/Guidebook/shuttle_maps/128x96.rsi
+    state: direlogo
+
+- type: entity
+  parent: PosterBase
   id: ShuttleMapDagger
   name: "Dagger"
   description: "Detailed map of a Dagger shuttle."
@@ -349,3 +360,14 @@
   - type: Sprite
     sprite: _WF/Guidebook/shuttle_maps/128x96.rsi
     state: zenith
+
+- type: entity
+  parent: PosterBase
+  id: ShuttleMapDelivery
+  name: "Delivery"
+  description: "Detailed map of a Delivery shuttle."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _WF/Guidebook/shuttle_maps/128x96.rsi
+    state: delivery

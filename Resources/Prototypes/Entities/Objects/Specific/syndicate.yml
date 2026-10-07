@@ -24,7 +24,7 @@
 # Wayfarer: Add tag whitelist
   - type: Tag
     tags:
-    - WhitelistWallet
+    - FitsWallet
 # End Wayfarer
 
 - type: entity

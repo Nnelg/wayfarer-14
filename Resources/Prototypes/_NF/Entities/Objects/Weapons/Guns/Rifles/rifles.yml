@@ -43,6 +43,8 @@
     sprite: Objects/Fun/Foam/foam_rifle.rsi
   - type: Item
     sprite: Objects/Fun/Foam/foam_rifle_inhand_64x.rsi
+  - type: Gun # Wayfarer
+    projectileSpeed: 30 # Wayfarer 30 (any faster and foam darts start clipping through/into walls)
 
 #region WizDen: Rubber
 - type: entity
