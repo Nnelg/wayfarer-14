@@ -12,7 +12,8 @@ id-card-access-level-detective = Internal Affairs
 id-card-access-level-genpop-enter = Enter Genpop
 id-card-access-level-genpop-leave = Leave Genpop
 
-id-card-access-level-chief-engineer = Plant Manager
+# Wayfarer: Plant Manager<Project Manager
+id-card-access-level-chief-engineer = Project Manager
 id-card-access-level-engineering = Engineering
 id-card-access-level-atmospherics = Atmospherics
 

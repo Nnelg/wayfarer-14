@@ -1,7 +1,7 @@
 - type: entity
   id: WFComputerCargoOrdersEdison
   parent: ComputerCargoOrders
-  name: plant manager's cargo request computer
+  name: project manager's cargo request computer
   description: Used to purchase restricted engineering supplies.
   components:
   - type: Sprite
