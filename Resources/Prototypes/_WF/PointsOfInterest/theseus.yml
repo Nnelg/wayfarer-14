@@ -43,8 +43,8 @@
           mapNameTemplate: 'Theseus High Orbital Drydock'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Interface/StationIcons/banner_engineering.png
-          stationSubtext: frontier-lobby-theseus-subtext
-          stationDescription: frontier-lobby-theseus-description
+          stationSubtext: wayfarer-lobby-theseus-subtext
+          stationDescription: wayfarer-lobby-theseus-description
           lobbySortOrder: 5
         - type: StationJobs
           availableJobs:
